@@ -10,7 +10,10 @@ data_ncd <- read_csv(here("data/burden-of-disease-ncd.csv"))
 
 ```{r}
 # Filter the dataset to include only the three countries chosen by your group.
-data_ncd_mini <- "WRITE_YOUR_CODE_HERE"
+library(janitor)
+data_ncd_mini <- data_ncd %>% filter(Code=="AGO" | Code=="CHN" | Code=="BEN") 
+  colnames(data_ncd_mini)[4] <- "burden"
+  
 ```
 
 ## Table of Estimates for NCD Burden Over Time
@@ -18,8 +21,16 @@ data_ncd_mini <- "WRITE_YOUR_CODE_HERE"
 ```{r}
 # Here render a table for the DALY burden over time for the three countries.
 # You should pivot the data wider to show each country in a separate column.
-data_ncd_wide <- "WRITE_YOUR_CODE_HERE"
+data_ncd_wide <-  data_ncd_mini %>% 
+  select(-Code) %>% 
+  pivot_wider(
+    names_from  = Entity,
+    values_from = burden
+  ) %>% 
 # Use kable() from the knitr package to render the table.
+kable()
+data_ncd_wide
+
 ```
 
 ## Plot Showing Trends in NCD Burden Over Time
@@ -27,6 +38,9 @@ data_ncd_wide <- "WRITE_YOUR_CODE_HERE"
 ```{r}
 # Here, plot a line graph showing the trend of DALY burden for the chosen countries over time. You can use ggplot2 to create this plot. Each country's line should be a different color.
 # NOTE: Use your long 'mini' data frame for plotting, not the wide data used for the table.
+ggplot(data=data_ncd_mini,
+       mapping = aes(x = Year, y= burden, color=Entity))+
+  geom_line()
 ```
 
 ## Summary of NCD Burden Findings
