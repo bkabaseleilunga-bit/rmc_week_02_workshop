@@ -14,5 +14,5 @@ This document compares the Disability-Adjusted Life Year (DALY) diseases burden 
 
 The source data is from the Institute for Health Metrics and Evaluation (IHME) Global Burden of Disease (GBD) study.
 
-```{r child= c('01_cmnn_burden_CHILD.Rmd', '02_ncd_burden_CHILD.Rmd', '03_overall_burden_CHILD.Rmd')}
+```{r child= c('01_cmnn_burden_CHILD.Rmd', '02_ncd_burden_CHILD.Rmd')}
 ```

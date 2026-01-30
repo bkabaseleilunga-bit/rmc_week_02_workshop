@@ -36,7 +36,7 @@ data_cmnn_wide
 
 ## Plot Showing Trends in CMNN Burden Over Time
 
-```{r}
+```{r echo=FALSE}
 # Here, plot a line graph showing the trend of DALY burden for the chosen countries over time. You can use ggplot2 to create this plot. Each country's line should be a different color.
 ggplot(data = data_cmnn_mini, 
        aes(x = Year, 
@@ -60,6 +60,6 @@ Globaly, The plot shows a clear decline in DALY burden from 1990 to 2019, indica
 
 ## Attribution
 
-This section was completed by Bienvenu Kabasele
+This section was completed by **Bienvenu Kabasele**
 
-The link to the group's GitHub repository is <https://github.com/bkabaseleilunga-bit/rmc_week_02_workshop>
+The link to the group's GitHub repository is *<https://github.com/bkabaseleilunga-bit/rmc_week_02_workshop>*
