@@ -18,7 +18,7 @@ data_ncd_mini <- data_ncd %>% filter(Code=="AGO" | Code=="CHN" | Code=="BEN")
 
 ## Table of Estimates for NCD Burden Over Time
 
-```{r echo=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
 # Here render a table for the DALY burden over time for the three countries.
 # You should pivot the data wider to show each country in a separate column.
 data_ncd_wide <-  data_ncd_mini %>% 

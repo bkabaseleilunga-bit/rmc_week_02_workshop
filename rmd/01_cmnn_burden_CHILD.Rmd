@@ -20,7 +20,7 @@ data_cmnn_mini <- data_cmnn %>%
 
 ## Table of Estimates for CMNN Burden Over Time
 
-```{r}
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
 # Here render a table for the DALY burden over time for the three countries.
 # You should pivot the data wider to show each country in a separate column.
 data_cmnn_wide <- data_cmnn_mini %>% 
@@ -36,7 +36,7 @@ data_cmnn_wide
 
 ## Plot Showing Trends in CMNN Burden Over Time
 
-```{r echo=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
 # Here, plot a line graph showing the trend of DALY burden for the chosen countries over time. You can use ggplot2 to create this plot. Each country's line should be a different color.
 ggplot(data = data_cmnn_mini, 
        aes(x = Year, 

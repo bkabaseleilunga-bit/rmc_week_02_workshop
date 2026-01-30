@@ -379,17 +379,6 @@ library(janitor)</code></pre>
   colnames(data_ncd_mini)[4] &lt;- &quot;burden&quot;</code></pre>
 <div id="table-of-estimates-for-ncd-burden-over-time" class="section level2">
 <h2>Table of Estimates for NCD Burden Over Time</h2>
-<pre class="r"><code># Here render a table for the DALY burden over time for the three countries.
-# You should pivot the data wider to show each country in a separate column.
-data_ncd_wide &lt;-  data_ncd_mini %&gt;% 
-  select(-Code) %&gt;% 
-  pivot_wider(
-    names_from  = Entity,
-    values_from = burden
-  ) %&gt;% 
-# Use kable() from the knitr package to render the table.
-kable()
-data_ncd_wide</code></pre>
 <table>
 <thead>
 <tr class="header">
