@@ -45,10 +45,10 @@ ggplot(data=data_ncd_mini,
 
 ## Summary of NCD Burden Findings
 
-Provide a brief analysis based on the data presented in the table and chart. Highlight any significant findings or patterns. About 3 sentences.
+We observed that all three countries had a high burden of non-communicable diseases in the 1990s. However, over the years, we observed a decrease in the burden of non-communicable diseases in all these countries. That being said, China experienced a more pronounced decline compared with Angola and Benin.
 
 ## Attribution
 
-This section was completed by [WRITE YOUR NAME HERE!]
+This section was completed by Fara
 
-The link to the group's GitHub repository is [WRITE THE LINK HERE!]
+The link to the group's GitHub repository is [https://github.com/bkabaseleilunga-bit/rmc_week_02_workshop]
