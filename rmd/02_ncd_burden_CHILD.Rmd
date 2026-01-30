@@ -8,7 +8,7 @@ pacman::p_load(tidyverse, knitr, here)
 data_ncd <- read_csv(here("data/burden-of-disease-ncd.csv"))
 ```
 
-```{r}
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
 # Filter the dataset to include only the three countries chosen by your group.
 library(janitor)
 data_ncd_mini <- data_ncd %>% filter(Code=="AGO" | Code=="CHN" | Code=="BEN") 
